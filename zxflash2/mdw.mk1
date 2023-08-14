@@ -1,0 +1,15 @@
+!define BLANK ""
+C:\Users\zhaoxin\Desktop\zxflash2\mdw.obj : C:\Users\zhaoxin\Desktop\zxflash&
+2\mdw.c .AUTODEPEND
+ @C:
+ cd C:\Users\zhaoxin\Desktop\zxflash2
+ *wcc386 mdw.c -i=C:\WATCOM\h -w4 -e25 -zq -od -d2 -6r -bt=dos -mf
+
+C:\Users\zhaoxin\Desktop\zxflash2\mdw.exe : C:\Users\zhaoxin\Desktop\zxflash&
+2\mdw.obj .AUTODEPEND
+ @C:
+ cd C:\Users\zhaoxin\Desktop\zxflash2
+ @%write mdw.lk1 FIL mdw.obj
+ @%append mdw.lk1 
+ *wlink name mdw d all SYS dos4g op m op maxe=25 op q op symf @mdw.lk1
+

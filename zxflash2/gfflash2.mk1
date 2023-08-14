@@ -1,0 +1,35 @@
+!define BLANK ""
+D:\zxflash2\flash.obj : D:\zxflash2\flash.c .AUTODEPEND
+ @D:
+ cd D:\zxflash2
+ *wcc386 flash.c -i=C:\WATCOM\h -w4 -e25 -zq -od -d2 -6r -bt=dos -mf
+
+D:\zxflash2\main.obj : D:\zxflash2\main.c .AUTODEPEND
+ @D:
+ cd D:\zxflash2
+ *wcc386 main.c -i=C:\WATCOM\h -w4 -e25 -zq -od -d2 -6r -bt=dos -mf
+
+D:\zxflash2\mdw.obj : D:\zxflash2\mdw.c .AUTODEPEND
+ @D:
+ cd D:\zxflash2
+ *wcc386 mdw.c -i=C:\WATCOM\h -w4 -e25 -zq -od -d2 -6r -bt=dos -mf
+
+D:\zxflash2\pciif.obj : D:\zxflash2\pciif.c .AUTODEPEND
+ @D:
+ cd D:\zxflash2
+ *wcc386 pciif.c -i=C:\WATCOM\h -w4 -e25 -zq -od -d2 -6r -bt=dos -mf
+
+D:\zxflash2\spi_flash.obj : D:\zxflash2\spi_flash.c .AUTODEPEND
+ @D:
+ cd D:\zxflash2
+ *wcc386 spi_flash.c -i=C:\WATCOM\h -w4 -e25 -zq -od -d2 -6r -bt=dos -mf
+
+D:\zxflash2\gfflash2.exe : D:\zxflash2\flash.obj D:\zxflash2\main.obj D:\zxf&
+lash2\mdw.obj D:\zxflash2\pciif.obj D:\zxflash2\spi_flash.obj .AUTODEPEND
+ @D:
+ cd D:\zxflash2
+ @%write gfflash2.lk1 FIL flash.obj,main.obj,mdw.obj,pciif.obj,spi_flash.obj
+ @%append gfflash2.lk1 
+ *wlink name gfflash2 d all SYS dos4g op m op maxe=25 op q op symf @gfflash2&
+.lk1
+
