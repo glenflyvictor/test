@@ -18,6 +18,8 @@
 char Value_MD5[20];
 extern  vendorID;
 extern  deviceID;
+
+
 // md5.c
 
 unsigned char PADDING[]={0x80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -296,7 +298,7 @@ int flash_main(int argc, char **argv)
 */	//********check device id***************
     Check_Did(romImageName);
     //********added by cheerychen ;for check md5;2022.3.1**************************
-    //1¡¢find firmware MD5 for 0XF0B4;pmpbuff is MD5;//check 0Xf003==0X02;0X02 is for MD5;
+    //1ï¿½ï¿½find firmware MD5 for 0XF0B4;pmpbuff is MD5;//check 0Xf003==0X02;0X02 is for MD5;
     checksum_flag=checksum(romImageName);   
     if (checksum_flag==1){
     FM_md5_Info(romImageName);

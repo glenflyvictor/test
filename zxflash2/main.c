@@ -18,15 +18,18 @@ unsigned short vendorID;
 unsigned short deviceID;
 
 
+
 struct test_vector test_vector_buf[] = {
         {
                 "/p",
                 "/p filename    --flash vbios to spi rom",
+                
                 flash_main,
         },
         {
                 "/d",
                 "/d filename    --dump vbios to filename from spi rom",
+                
                 dump_main,
         },
         {
