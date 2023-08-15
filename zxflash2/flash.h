@@ -9,6 +9,7 @@
 #define ROM_FILE_ERROR 12
 #define FLASH_ERROR 20
 
+
 #define MAX_VIDEO_ROM_SIZE 0x50000 // 64k+256k
 #define FP_MD5_SIZE 16	//size of flash part page (in bytes)
 #define FP_PAGE_SIZE 128	//size of flash part page (in bytes)

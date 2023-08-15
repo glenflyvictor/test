@@ -15,6 +15,7 @@
 #include <memory.h>
 
 
+
 char Value_MD5[20];
 extern  vendorID;
 extern  deviceID;
